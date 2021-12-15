@@ -61,10 +61,7 @@ export class HomePage implements OnInit {
     })
     this.checkDB();
     this.getDraftList();
-  }
 
-  refresh() {
-    console.log('refresh');
   }
 
   checkDB() {
