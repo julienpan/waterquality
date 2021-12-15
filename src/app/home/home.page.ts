@@ -47,7 +47,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
 
-    this.date = moment().utc().add(1, 'hours').format('LLL')
+    this.date = moment().utc().add(1, 'hours').format('LL LTS')
     console.log(this.date);
 
     this.phRef = this.firestore.collection('phData');
