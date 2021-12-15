@@ -8,18 +8,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-item>
-          <ion-label position="floating">Recherche</ion-label>
-          <ion-datetime displayFormat="DD/MM/YYYY HH:mm" placeholder="Cherche une date" [(ngModel)]="date" (ionChange)="changeDate($event)"></ion-datetime>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
 
-  <ion-grid class="draft" *ngIf="showSecond == false">
+  <ion-grid class="draft">
     <ion-row *ngFor="let draft of draftList; let i = index">
       <ion-col>
         {{i}}
@@ -33,17 +23,4 @@
     </ion-row>
   </ion-grid>
 
-  <ion-grid class="draft" *ngIf="showSecond == true">
-    <ion-row *ngFor="let draft of secondDraftList; let i = index">
-      <ion-col>
-        {{i}}
-      </ion-col>
-      <ion-col>
-        {{draft.value.value}}
-      </ion-col>
-      <ion-col>
-        {{draft.value.date}}
-      </ion-col>
-    </ion-row>
-  </ion-grid>
 </ion-content>
