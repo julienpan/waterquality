@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Historique</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="draft">
+    <ion-row *ngFor="let draft of draftList; let i = index">
+      <ion-col>
+        {{i}}
+      </ion-col>
+      <ion-col>
+        {{draft.value.value}}
+      </ion-col>
+      <ion-col>
+        {{draft.value.date}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

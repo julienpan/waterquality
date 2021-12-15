@@ -1,26 +1,3 @@
 <ion-app>
-  <ion-header class="ion-no-border">
-    <ion-toolbar [class.active]="exactValue > 0">
-      <ion-title *ngIf="exactValue > 0" color="light">WATER QUALITY</ion-title>
-      <ion-title *ngIf="exactValue == 0">WATER QUALITY</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-grid [class.active]="exactValue > 0">
-      <ion-row>
-        <ion-col>
-          <ion-text *ngIf="exactValue == 0" style="font-size: 40px;">En attente ...</ion-text>
-          <ion-text *ngIf="exactValue > 6 && exactValue < 7" color="light">{{exactValue}}</ion-text>
-          <ion-text *ngIf="exactValue > 0 && exactValue < 5" color="danger">{{exactValue}}</ion-text>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-text style="font-size: 30px" *ngIf="exactValue > 6 && exactValue < 7" color="light">
-            Eau potable !
-          </ion-text>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-content>
+  <ion-router-outlet></ion-router-outlet>
 </ion-app>

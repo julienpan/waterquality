@@ -1,0 +1,17 @@
+.draft {
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+    color: black;
+
+    ion-row {
+        border: 1px solid black;
+        ion-col {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+}

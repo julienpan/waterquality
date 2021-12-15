@@ -19,25 +19,6 @@ ion-content {
     }
 }
 
-.draft {
-    width: 100%;
-    height: fit-content;
-    padding: 50px;
-    background-color: rgb(76, 179, 205);
-    color: white;
-
-    ion-row {
-        border: 1px solid white;
-        ion-col {
-            border: 1px solid white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-    
-}
-
 .active {
     background-color: rgb(76, 179, 205);
     --background:rgb(76, 179, 205);

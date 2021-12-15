@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title color="light">WATER QUALITY</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="light" fill="outline" shape="round" (click)="navigateToDraft()">Historique</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid class="container" [class.active]="exactValue > 0">
+    <ion-row>
+      <ion-col>
+        <ion-text *ngIf="exactValue == 0" style="font-size: 40px;">En attente ...</ion-text>
+        <ion-text *ngIf="exactValue > 6 && exactValue < 7.5" color="light">{{exactValue}}</ion-text>
+        <ion-text *ngIf="exactValue > 0 && exactValue < 5" color="danger">{{exactValue}}</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col  *ngIf="exactValue > 6 && exactValue < 7.5">
+        <ion-text style="font-size: 30px" color="light">
+          Eau potable !
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col *ngIf="anotherValue && exactValue == null" style="text-align: center;">
+        <ion-text style="font-size: 30px" color="light">
+          En attente d'une nouvelle mesure ...
+        </ion-text>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
